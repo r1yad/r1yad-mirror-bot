@@ -55,13 +55,24 @@ git push heroku heroku:master -f
 
 ### Extras
 
+- To heroku-postgresql database
+```
+heroku addons:create heroku-postgresql
+```
 - To delete the app
 ```
 heroku apps:destroy YOURAPPNAME
 ```
 - To restart dyno
 ```
+heroku restart
+```
+- To turn off dyno
+```
 heroku ps:scale web=0
+```
+- To turn on dyno
+```
 heroku ps:scale web=1
 ```
 - To set heroku variable
